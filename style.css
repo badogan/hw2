@@ -28,3 +28,6 @@ p {
 
 I can have more comment text here
 and the following two symbols end my comment */
+p {
+    border: 1px black solid;
+ }
