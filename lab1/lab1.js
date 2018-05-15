@@ -18,9 +18,9 @@ var result_modulus = num1 % num2;
 
 var numbersString = num1 + " and " + num2 + " is ";
 
-document.getElementById("addition").innerHTML = "The sum of " + numbersString + result_addition;
-document.getElementById("subtraction").innerHTML = "The subtraction of " + numbersString + result_subtraction;
-document.getElementById("multiplication").innerHTML = "The multiplication of " + numbersString + result_multiplication;
-document.getElementById("division").innerHTML = "The division of " + numbersString + result_division;
-document.getElementById("modulus").innerHTML = "The modulus of " + numbersString + result_modulus;
+document.getElementById("element_ref_addition").innerHTML = "The sum of " + numbersString + result_addition;
+document.getElementById("element_ref_subtraction").innerHTML = "The subtraction of " + numbersString + result_subtraction;
+document.getElementById("element_ref_multiplication").innerHTML = "The multiplication of " + numbersString + result_multiplication;
+document.getElementById("element_ref_division").innerHTML = "The division of " + numbersString + result_division;
+document.getElementById("element_ref_modulus").innerHTML = "The modulus of " + numbersString + result_modulus;
 
