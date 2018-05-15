@@ -9,7 +9,7 @@ var guesses = [];
 for (var i = 1; i <= limit; i++){
     // prompt user for their guess
     do{
-        guess = parseInt(prompt("Guess a number"));
+        guess = parseInt(prompt("Guess a number in between 0 and 10 - both included"));
     } while(isNaN(guess) || isPreviousGuess(guess));
     
     // if correct: let the user know they won
