@@ -1,4 +1,6 @@
-var num1 = 804;
+var num1 = parseInt(window.prompt("Enter a number"));
+
+/*var num1 = 804;*/
 
 if(num1 % 2 == 0)
 {
