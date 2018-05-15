@@ -1,5 +1,5 @@
 // program data:
-var number = Math.floor(Math.random() * 100);
+var number = Math.floor(Math.random() * 10);
 var guess;
 var limit = 5;
 var won =  false;
