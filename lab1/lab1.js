@@ -10,3 +10,11 @@ var operand2 = document.getElementById("operand2");
 operand1.innerHTML += num1;
 operand2.innerHTML += num2;
 
+var sum = num1 + num2;
+var multiply = num1 * num2;
+var divide = num1 / num2;
+var subtract = num1 - num2;
+var modulus = num1 % num2;
+
+
+
