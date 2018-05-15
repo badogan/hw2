@@ -16,9 +16,11 @@ var result_division = num1 / num2;
 var result_subtraction = num1 - num2;
 var result_modulus = num1 % num2;
 
-document.getElementById("addition").innerHTML = "The sum of " + num1 + " and " + num2 + " is " + result_addition;
-document.getElementById("subtraction").innerHTML = "The subtraction of " + num1 + " and " + num2 + " is " + result_subtraction;
-document.getElementById("multiplication").innerHTML = "The multiplication of " + num1 + " and " + num2 + " is " + result_multiplication;
-document.getElementById("division").innerHTML = "The division of " + num1 + " and " + num2 + " is " + result_division;
-document.getElementById("modulus").innerHTML = "The modulus of " + num1 + " and " + num2 + " is " + result_modulus;
+var numbersString = num1 + " and " + num2 + " is ";
+
+document.getElementById("addition").innerHTML = "The sum of " + numbersString + result_addition;
+document.getElementById("subtraction").innerHTML = "The subtraction of " + numbersString + result_subtraction;
+document.getElementById("multiplication").innerHTML = "The multiplication of " + numbersString + result_multiplication;
+document.getElementById("division").innerHTML = "The division of " + numbersString + result_division;
+document.getElementById("modulus").innerHTML = "The modulus of " + numbersString + result_modulus;
 
