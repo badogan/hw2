@@ -16,6 +16,7 @@ for (i = 1; i <= limit; i++){
 
     // if correct: let the user know they won
     if(guess == number){
+        alert("Correct! You won. I will also write this on the page itself:)");
         document.write("Correct! You won.");
         won=true
         break;
