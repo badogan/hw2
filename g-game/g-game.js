@@ -11,7 +11,7 @@ for (i = 1; i <= limit; i++){
    // this is how we started: guess = prompt("Guess a number");
    do{
     guess = parseInt(prompt("Guess a number"));
-   } while(isPreviousGuess)
+   } while(!isPreviousGuess)
    
 
     // if correct: let the user know they won
@@ -33,7 +33,7 @@ if (!won){
 
 function isPreviousGuess(){
     for(i2 = 0; i2 < guesses.length; i2++){
-        if(guesses[i2] = guess){
+        if(guesses[i2] == guess){
             return true;
         }
     }
