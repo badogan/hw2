@@ -12,10 +12,11 @@ paragraph.onclick = changeGreeting;
 
 function changeGreeting(){
     if (i%2 == 0) {
-        paragraph.innerHTML = "Good Night!";
+        paragraph.innerHTML = "Good Night!" + i;
+        i=i+1
     }
         else {
-        paragraph.innerHTML = "Good Morning!";
-    i=i+1
+        paragraph.innerHTML = "Good Morning!" + i;
+        i=i+1    
     }
 }
