@@ -14,6 +14,6 @@ for (i = 1; i <= limit; i++){
     }
     // if incorrect: let the user know how  many tries they have remaining
     else{
-        alert("incorrect. \nTries remaining: " + (limit-1))
+        alert("incorrect. \nTries remaining: " + (limit-i))
     }
 }
