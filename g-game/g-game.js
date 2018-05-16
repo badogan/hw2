@@ -11,7 +11,7 @@ for (i = 1; i <= limit; i++){
    // this is how we started: guess = prompt("Guess a number");
    do{
     guess = parseInt(prompt("Guess a number"));
-   } while(!isPreviousGuess())
+   } while(isNaN(guess) || isPreviousGuess(guess));
    
 
     // if correct: let the user know they won
@@ -28,7 +28,7 @@ for (i = 1; i <= limit; i++){
 }
 
 if (!won){
-    document.write("Sorry, you ran out of tries! Game over!"); 
+    document.write("Sorry, you ran out of tries. Game over. <br> The correct number was: " + number);
 }
 
 function isPreviousGuess(){
