@@ -1,8 +1,10 @@
 // program data:
 var number = 4;
 var guess;
-var limit=5;
-var won=false;
+var limit = 5;
+var won = false;
+var guesses=[]
+
 
 for (i = 1; i <= limit; i++){
     // prompt user for their guess 
@@ -16,7 +18,8 @@ for (i = 1; i <= limit; i++){
     }
     // if incorrect: let the user know how  many tries they have remaining
     else{
-        alert("incorrect. \nTries remaining: " + (limit-i))
+        guess[i]=guess;
+        alert("incorrect. \n You have guessed: "+guesses[i].toString() + "\nTries remaining: " + (limit-i))
     }
 }
 
