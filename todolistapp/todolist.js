@@ -2,6 +2,7 @@
 var addButton = document.getElementById("add");
 var taskInput = document.getElementById("task");
 var taskList = document.getElementById("taskList");
+var clearButton = document.getElementById("clear");
 
 // add new item to task list
 addButton.addEventListener("click", function(){
@@ -20,3 +21,8 @@ addButton.addEventListener("click", function(){
         alert("Task cannot be empty");
     }
 });
+
+// clear entire list
+clearButton.addEventListener("click", function(){
+    taskList.innerHTML = "";
+  });
