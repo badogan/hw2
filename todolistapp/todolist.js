@@ -10,7 +10,7 @@ addButton.addEventListener("click", function(){
     // Don't add an empty string
     if(task.trim()){
         // add new task list item
-        var newItem = document.createElement("AnyRef");
+        var newItem = document.createElement("LI");
         var taskText = document.createTextNode(task);
         newItem.appendChild(taskText);
         // clear text input box
