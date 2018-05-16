@@ -6,9 +6,16 @@ message.innerHTML = "The following item was deleted " + removed.innerHTML; // me
 document.body.appendChild(message); // append paragraph message to the body to display on page
 
 var paragraph = document.getElementById("myParagraph");
+var i = 0;
 
 paragraph.onclick = changeGreeting;
 
 function changeGreeting(){
-    paragraph.innerHTML = "Good Night!";
+    if (i%2 == 0) {
+        paragraph.innerHTML = "Good Night!";
+    }
+        else {
+        paragraph.innerHTML = "Good Morning!";
+    i=i+1
+    }
 }
