@@ -10,7 +10,7 @@ for (i = 1; i <= limit; i++){
     // prompt user for their guess 
    // this is how we started: guess = prompt("Guess a number");
    do{
-    guess = parseInt(prompt(number + " Guess a number"));
+    guess = parseInt(prompt(number + " <-- Guess the number :)"));
    } while(isNaN(guess) || isPreviousGuess(guess));
    
 
