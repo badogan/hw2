@@ -34,7 +34,7 @@ if (!won){
 function isPreviousGuess(){
     for(i2 = 0; i2 < guesses.length; i2++){
         if(guesses[i2] == guess){
-            document.write("You already entered this!!!");
+            alert("You already entered this!!!");
             return true;
         }
     }
