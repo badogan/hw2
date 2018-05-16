@@ -1,0 +1,42 @@
+body {
+    background-color: #83AF9B;
+    text-align: center;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: #FE4365;
+    color: #F9CDAD;
+    font-size: 3em;
+    padding: 0;
+}
+
+h2 {
+    color: #FE4365;
+    background-color: #F9CDAD;
+}
+
+img {
+    height: 250px;
+}
+
+p {
+    background-color: #FC9D9A;
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+}
+/* those two symbols start my comment block
+
+I can have more comment text here
+and the following two symbols end my comment */
+p {
+    border: 1px black solid;
+ }
+
+ h1 {
+    width: 5em;
+    /*float: left;*/
+ }
