@@ -9,7 +9,10 @@ var guesses=[]
 for (i = 1; i <= limit; i++){
     // prompt user for their guess 
    // this is how we started: guess = prompt("Guess a number");
+   do{
     guess = parseInt(prompt("Guess a number"));
+   } while(!isPreviousGuess)
+   
 
     // if correct: let the user know they won
     if(guess == number){
