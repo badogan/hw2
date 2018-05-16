@@ -18,7 +18,7 @@ for (i = 1; i <= limit; i++){
     }
     // if incorrect: let the user know how  many tries they have remaining
     else{
-        guess[i]=guess;
+        guesses[i]=guess;
         alert("incorrect. \n You have guessed: "+guesses[i].toString() + "\nTries remaining: " + (limit-i))
     }
 }
