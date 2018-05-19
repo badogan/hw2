@@ -12,6 +12,18 @@ timingNext.onclick = function(){
 var enterBudget = document.getElementById("enterBudget");
 enterBudget.onclick = calculateBudget;
 
+var images = ["images/img1", "images/img2", "images/img3", "images/img4" ];
+var currentImage = 0;
+setInterval(changeImage, 2000);
+function changeImage(){
+    currentImage++;
+    if(currentImage > images.length - 1){
+        currentImage = 0;
+    }
+    document.body.style.backgroundImage = "url(" + images[currentImage] + ")";
+}
+
+
 
 function calculateBudget(){
     var budgetInput = document.getElementById("tripBudget");
