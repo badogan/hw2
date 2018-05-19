@@ -14,7 +14,7 @@ enterBudget.onclick = calculateBudget;
 
 var images = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg", "images/img4.jpg" ];
 var currentImage = 0;
-setInterval(changeImage, 2000);
+setInterval(changeImage, 4000);
 function changeImage(){
     currentImage++;
     if(currentImage > images.length - 1){
