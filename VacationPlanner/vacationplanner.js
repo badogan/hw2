@@ -12,7 +12,7 @@ timingNext.onclick = function(){
 var enterBudget = document.getElementById("enterBudget");
 enterBudget.onclick = calculateBudget;
 
-var images = ["images/img1", "images/img2", "images/img3", "images/img4" ];
+var images = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg", "images/img4.jpg" ];
 var currentImage = 0;
 setInterval(changeImage, 2000);
 function changeImage(){
