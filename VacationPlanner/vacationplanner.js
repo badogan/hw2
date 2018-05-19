@@ -9,6 +9,18 @@ timingNext.onclick = function(){
     document.getElementById("budgetSection").removeAttribute("hidden");
 } 
 
+var enterBudget = document.getElementById("enterBudget");
+enterBudget.onclick = calculateBudget;
+
+
+function calculateBudget(){
+    var budgetInput = document.getElementById("tripBudget");
+    var budget = budgetInput.value;
+    
+    var tripExchangeMsg = document.getElementById("tripExchangeMsg");
+    tripExchangeMsg.innerHTML = "Your budget is" + budget*1.4 + " in NZ currency";
+}
+
 function calculateDays(){
     var daysInput = document.getElementById("days");
     var days = daysInput.value;
