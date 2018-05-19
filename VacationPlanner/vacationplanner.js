@@ -6,7 +6,7 @@ var enterDays = document.getElementById("enterDays");
 enterDays.onclick = calculateDays;
 
 timingNext.onclick = function(){
-    document.getElementById("budget").removeAttribute("hidden");
+    document.getElementById("budgetSection").removeAttribute("hidden");
 } 
 
 function calculateDays(){
