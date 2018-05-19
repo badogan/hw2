@@ -28,6 +28,9 @@ function calculateDays(){
      hoursMessage.innerHTML = "Your trip is" + days*24*60 + " minutes long!";
 
      var secondsMessage = document.getElementById("secondsMessage");
-     hoursMessage.innerHTML = "Your trip is" + days*24*60*60 + " secondsminutes long!";
+     hoursMessage.innerHTML = "Your trip is" + days*24*60*60 + " seconds long!";
+
+     var timingNext = document.getElementById("timingNext");
+     timingNext.removeAttribute("hidden");
 
 }
