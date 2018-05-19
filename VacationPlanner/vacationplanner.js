@@ -33,4 +33,8 @@ function calculateDays(){
      var timingNext = document.getElementById("timingNext");
      timingNext.removeAttribute("hidden");
 
+     timingNext.onclick = function(){
+         document.getElementById("budget").removeAttribute("hidden");
+   } 
+
 }
