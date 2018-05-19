@@ -5,6 +5,9 @@ greeting.innerHTML += ", " + name;
 var enterDays = document.getElementById("enterDays");
 enterDays.onclick = calculateDays;
 
+timingNext.onclick = function(){
+    document.getElementById("budget").removeAttribute("hidden");
+} 
 
 function calculateDays(){
     var daysInput = document.getElementById("days");
@@ -25,16 +28,12 @@ function calculateDays(){
      hoursMessage.innerHTML = "Your trip is" + days*24 + " hours long!";
 
      var minutesMessage = document.getElementById("minutesMessage");
-     hoursMessage.innerHTML = "Your trip is" + days*24*60 + " minutes long!";
+     minutesMessage.innerHTML = "Your trip is" + days*24*60 + " minutes long!";
 
      var secondsMessage = document.getElementById("secondsMessage");
-     hoursMessage.innerHTML = "Your trip is" + days*24*60*60 + " seconds long!";
+     secondsMessage.innerHTML = "Your trip is" + days*24*60*60 + " seconds long!";
 
      var timingNext = document.getElementById("timingNext");
      timingNext.removeAttribute("hidden");
-
-     timingNext.onclick = function(){
-         document.getElementById("budget").removeAttribute("hidden");
-   } 
 
 }
