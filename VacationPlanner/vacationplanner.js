@@ -9,6 +9,7 @@ enterDays.onclick = calculateDays;
 function calculateDays(){
     var daysInput = document.getElementById("days");
     var days = daysInput.value;
+    
     var daysMessage = document.getElementById("daysMessage");
      if(days < 4){
          daysMessage.innerHTML = "Short trips are always worth it!";
@@ -19,4 +20,14 @@ function calculateDays(){
      else{
          daysMessage.innerHTML = "You'll have plenty of time to relax and have fun!";
      }
+
+     var hoursMessage = document.getElementById("hoursMessage");
+     hoursMessage.innerHTML = "Your trip is" + days*24 + " hours long!";
+
+     var minutesMessage = document.getElementById("minutesMessage");
+     hoursMessage.innerHTML = "Your trip is" + days*24*60 + " minutes long!";
+
+     var secondsMessage = document.getElementById("secondsMessage");
+     hoursMessage.innerHTML = "Your trip is" + days*24*60*60 + " secondsminutes long!";
+
 }
