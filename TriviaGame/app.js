@@ -21,8 +21,8 @@ function populateQuestions(){
     // populate with default questions
     questions = defaultQuestions;
     // if local storage contains questions, add to question set
-    if(localStorage.getItem("Basriquestions2")){
-        var storedQuestions = JSON.parse(localStorage.getItem("Basriquestions2"));
+    if(localStorage.getItem("questions2")){
+        var storedQuestions = JSON.parse(localStorage.getItem("questions2"));
         for(var i = 0; i < storedQuestions.length; i++){
             questions.push(storedQuestions[i]);
         }
