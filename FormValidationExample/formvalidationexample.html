@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Form Validation Example</title>
+        <link rel="stylesheet" href="simple.css">
+    </head>
+    <body>
+        <form action="" onsubmit = "return verify()" method="POST">
+            <input id="username" name="username" type="text">Enter your name</input>
+          <input id="number" name="number" type="text">Enter a number between 40-90</input>
+          <input type="submit"></input>
+
+          <p id="validationMessage" hidden>Number must be between 40-90</p>
+          <p id="nanMessage" hidden>Please enter a numeric value</p>
+
+        </form>
+          
+
+        <script src="formvalidation.js"></script>
+
+    </body>
+</html>
