@@ -15,8 +15,8 @@ addButton.addEventListener("click", function(){
         newItem.appendChild(taskText);
         
         // clear text input box
-        taskInput.value = "";
-        taskList.appendChild(newItem);
+        //taskInput.value = "";
+        //taskList.appendChild(newItem);
          // add remove option for new item
         var removeButton = document.createElement("BUTTON");
         removeButton.innerHTML = "Done";
