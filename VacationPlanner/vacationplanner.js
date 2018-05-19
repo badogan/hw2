@@ -19,6 +19,9 @@ function calculateBudget(){
     
     var tripExchangeMsg = document.getElementById("tripExchangeMsg");
     tripExchangeMsg.innerHTML = "Your budget is" + budget*1.4 + " in NZ currency";
+
+    var dailyExchangeMsg = document.getElementById("dailyExchangeMsg");
+    dailyExchangeMsg.innerHTML = "Your daily budget is" + budget*1.4/days + " (in NZ currency)";
 }
 
 function calculateDays(){
