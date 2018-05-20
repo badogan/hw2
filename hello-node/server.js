@@ -3,7 +3,7 @@ var port = 3000;
 
 var requestHandler = function(request, response){
      console.log('Request came from: ' + request.url);
-     response.end('Hello, World!');
+     response.end('Hello, World!.... BTW, the request came from: ' + request.url);
 }
 
 var server = http.createServer(requestHandler);
