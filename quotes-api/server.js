@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var port = 3001;
+var bodyParser = require('body-parser');
+
 app.listen(port, function(){
     console.log('Basri-Express app listening on port ' + port);
 });
@@ -49,6 +51,12 @@ app.get('/quoteswithID/:id', function(req, res){
     res.send("Return quote with the ID: " + req.params.id);
 });
 
+//app.post('/quotes', function(req, res){
+    //console.log("Insert a new quote");
+//});
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/quotes', function(req, res){
-    console.log("Insert a new quote");
-});
+    console.log("Insert a new quote: " + req.body.quote);
+    res.json(req.body);
+  });
