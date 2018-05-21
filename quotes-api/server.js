@@ -46,6 +46,5 @@ app.get('/quotes', function(req, res){
 
 app.get('/quoteswithID/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
-    res.send("quotes[req.params.id]")
     res.send("Return quote with the ID: " + req.params.id);
 });
