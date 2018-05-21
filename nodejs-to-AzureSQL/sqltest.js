@@ -45,7 +45,8 @@ function queryDatabase()
 
      request.on('row', function(columns) {
         columns.forEach(function(column) {
-            console.log("%s\t%s\n", column.metadata.colName, column.value);
+            console.log("%s\t%s", column.metadata.colName, column.value);
+            console.log("-----------------------------");
          });
              });
      connection.execSql(request);
