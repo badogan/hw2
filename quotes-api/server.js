@@ -9,5 +9,5 @@ app.listen(port, function(){
 // (for me in this stage at least) :)
 
 app.get('/get', function(request, response){
-    response.send('3001 test Basri says Hello, World!');
+    response.send('Basri get request received' + );
 });
