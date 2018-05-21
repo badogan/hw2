@@ -30,7 +30,7 @@ connection.on('connect', function(err)
  );
 
 function queryDatabase()
-   { console.log('Reading rows from the Table...');
+   { console.log('Basri - Reading rows from the Table...');
 
        // Read all rows from table
      request = new Request(
@@ -45,7 +45,7 @@ function queryDatabase()
 
      request.on('row', function(columns) {
         columns.forEach(function(column) {
-            console.log("%s\t%s", column.metadata.colName, column.value);
+            console.log("%s\t%s\n", column.metadata.colName, column.value);
          });
              });
      connection.execSql(request);
