@@ -36,7 +36,6 @@ var quotes = [
 
 app.get('/quotes', function(req, res){
     console.log("Get a list of all quotes as json");
-    res.json(quotes);
-    json(quotes[0]);
+    //res.json(quotes);
 });
 
