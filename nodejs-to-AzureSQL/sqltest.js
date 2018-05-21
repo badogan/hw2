@@ -54,6 +54,6 @@ var array=[];
          });
              });
      
-    console.log("\n%s\n", array[0]);
+    console.log('array[0]', array[0]);
      connection.execSql(request);
    }
