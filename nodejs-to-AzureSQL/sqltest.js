@@ -60,7 +60,7 @@ var output="";
 var connection = new Connection(config);  
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.  
-        console.log("Connected");  
+        console.log("Connected-1 ");  
         executeStatement1();  
     });  
 
