@@ -43,7 +43,7 @@ app.get('/quotes', function(req, res){
         res.send("Return a list of quotes from the year: " + req.query.year);
       }
       else{
-          res.json(quotes);
+        res.json(quotes);
       }
 });
 
