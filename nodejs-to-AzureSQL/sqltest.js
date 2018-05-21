@@ -48,7 +48,7 @@ var array=[];
 
      request.on('row', function(columns) {
         columns.forEach(function(column) {
-            array[i]=[column.metadata.colName,column.value];
+            array[i]=[column.value];
             console.log("%s\t%s", column.metadata.colName, column.value);
             i=i+1;
          });
