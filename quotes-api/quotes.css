@@ -2,10 +2,8 @@ html{
     height: 100%;
 }
 body{
-    background: url("images/newzealand_hero.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     text-align: center;
+    color: yellow;
 }
 
 label{
