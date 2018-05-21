@@ -5,6 +5,6 @@ app.listen(port, function(){
     console.log('Basri-Express app listening on port ' + port);
 });
 
-app.get('/', function(request, response){
+app.get('/get', function(request, response){
     response.send('Basri says Hello, World!');
 });
