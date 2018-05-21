@@ -48,3 +48,7 @@ app.get('/quoteswithID/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
     res.send("Return quote with the ID: " + req.params.id);
 });
+
+app.post('/quotes', function(req, res){
+    console.log("Insert a new quote");
+});
