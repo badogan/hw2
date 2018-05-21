@@ -44,6 +44,9 @@ app.get('/quotes', function(req, res){
       }
       else{
           res.json(quotes);
+          //BASRI ADDITION:)
+        var Message_to_pass = document.getElementById("Message_to_pass");
+        Message_to_pass.innerHTML = "Unpack the json and show here!";
       }
 });
 
@@ -64,7 +67,3 @@ app.post('/quotes', function(req, res){
 app.listen(port, function(){
     console.log('Basri-Express app listening on port  ' + port);
 });
-
-//BASRI ADDITION:)
-var Message_to_pass = document.getElementById("Message_to_pass");
-    Message_to_pass.innerHTML = "Unpack the json and show here!";
