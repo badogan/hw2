@@ -32,6 +32,7 @@ var Connection = require('tedious').Connection;
               }  
             });  
             console.log(result);  
+            console.log("I am here!")
             result ="";  
         });  
 
