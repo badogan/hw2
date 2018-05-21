@@ -44,7 +44,7 @@ app.get('/quotes', function(req, res){
       }
 });
 
-app.get('/quotesid/:id', function(req, res){
+app.get('/quoteswithid/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
     res.send("Return quote with the ID: " + req.params.id);
 });
