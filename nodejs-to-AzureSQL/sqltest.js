@@ -42,7 +42,7 @@ function queryDatabase()
                     process.exit();
                 }
             );
-            
+
 var i=0;
 var array=[];
 
@@ -53,5 +53,7 @@ var array=[];
             i=i+1;
          });
              });
+     
+    console.log("\n%s\n", array[0]);
      connection.execSql(request);
    }
