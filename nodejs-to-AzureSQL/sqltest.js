@@ -42,7 +42,10 @@ function queryDatabase()
                     process.exit();
                 }
             );
+            
 var i=0;
+var array=[];
+
      request.on('row', function(columns) {
         columns.forEach(function(column) {
             array[i]=[column.metadata.colName,column.value];
