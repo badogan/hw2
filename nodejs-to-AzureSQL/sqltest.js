@@ -48,7 +48,7 @@ var output="";
      request.on('row', function(columns) {
         columns.forEach(function(column) {
             //console.log("%s\t%s", column.metadata.colName, column.value);
-            output=output+column.value+" ";
+            output=output+column.value+"\t";
          });
          console.log(output)
          output=""
