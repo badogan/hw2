@@ -36,9 +36,8 @@ var Connection = require('tedious').Connection;
             result ="";  
         });  
 
-        request.on('done', function(rowCount, more) {  
+        request.on('done', function(rowCount) {  
         console.log(rowCount + ' rows returned');  
-        process.exit(); //I added
         });  
 
         connection.execSql(request);  
