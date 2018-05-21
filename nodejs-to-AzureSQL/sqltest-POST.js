@@ -33,5 +33,6 @@ function executeStatement1() {
     //        console.log("Product id of inserted item is " + column.value);  
     //      }  
     //    });  
-    };       
-    connection.execSql(request);  
+          
+    connection.execSql(request);
+}
