@@ -1,6 +1,6 @@
 var Connection = require('tedious').Connection;
 var Request = require('tedious').Request;
-var TYPES = require('tedious').TYPES;  
+//var TYPES = require('tedious').TYPES;  
 
 // Create connection to database
 var config = 
@@ -55,35 +55,3 @@ var output="";
              });
      connection.execSql(request);
    } 
-
-// POST Operation starting!!!!!
-var connection = new Connection(config);  
-    connection.on('connect', function(err) {  
-        // If no error, then good to proceed.  
-        console.log("Connected-1 ");  
-        executeStatement1();  
-    });  
-
-    //var Request = require('tedious').Request  
-    //var TYPES = require('tedious').TYPES;  
-
-    function executeStatement1() {  
-        request = new Request("INSERT into contacts VALUES (@ID, @FirstName, @Age, @PhoneNumber);", function(err) {  
-         if (err) {  
-            console.log(err);}  
-        });  
-        request.addParameter('ID', TYPES.NVarChar,'8');  
-        request.addParameter('FirstName', TYPES.NVarChar , 'Basri');  
-        request.addParameter('Age', TYPES.Int, 47);  
-        request.addParameter('PhoneNumber', TYPES.NVarChar,'999-999-9999');  
-        request.on('row', function(columns) {  
-            columns.forEach(function(column) {  
-              if (column.value === null) {  
-                console.log('NULL');  
-              } else {  
-                console.log("Product id of inserted item is " + column.value);  
-              }  
-            });  
-        });       
-        connection.execSql(request);  
-    }  
