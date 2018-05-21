@@ -36,7 +36,7 @@ var Connection = require('tedious').Connection;
             result ="";  
         });  
 
-        request.on(function(rowCount,more) {  
+        request.on('Done',function(rowCount,more) {  
         console.log(rowCount + ' rows returned');  
         });  
 
