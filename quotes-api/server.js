@@ -44,9 +44,6 @@ app.get('/quotes', function(req, res){
       }
       else{
           res.json(quotes);
-          //BASRI ADDITION:)
-        var ref1 = document.getElementById("Ref1");
-        ref1.innerHTML = "Unpack the json and show here!";
       }
 });
 
