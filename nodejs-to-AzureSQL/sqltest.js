@@ -42,11 +42,12 @@ function queryDatabase()
                     process.exit();
                 }
             );
-
+var i=0;
      request.on('row', function(columns) {
         columns.forEach(function(column) {
+            array[i]=[column.metadata.colName,column.value];
             console.log("%s\t%s", column.metadata.colName, column.value);
-            console.log("-----------------------------");
+            i=i+1;
          });
              });
      connection.execSql(request);
