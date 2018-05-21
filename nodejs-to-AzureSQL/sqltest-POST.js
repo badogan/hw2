@@ -25,14 +25,13 @@ function executeStatement1() {
     request.addParameter('FirstName', TYPES.NVarChar , 'Zeynep');  
     request.addParameter('Age', TYPES.Int, 48);  
     request.addParameter('PhoneNumber', TYPES.NVarChar , '888-888-8888');  
-    request.on('row', function(columns) {  
-        columns.forEach(function(column) {  
-          if (column.value === null) {  
-            console.log('NULL');  
-          } else {  
-            console.log("Product id of inserted item is " + column.value);  
-          }  
-        });  
-    });       
+    //request.on('row', function(columns) {  
+    //    columns.forEach(function(column) {  
+    //      if (column.value === null) {  
+    //        console.log('NULL');  
+    //      } else {  
+    //        console.log("Product id of inserted item is " + column.value);  
+    //      }  
+    //    });  
+    };       
     connection.execSql(request);  
-} 
