@@ -43,17 +43,12 @@ function queryDatabase()
                 }
             );
 
-var i=0;
-var array=[];
-
      request.on('row', function(columns) {
         columns.forEach(function(column) {
-            array[i]=[column.value];
             console.log("%s\t%s", column.metadata.colName, column.value);
-            i=i+1;
+            console.log("Basri%s",column.metadata.colName);
          });
              });
      
-    console.log('array[0]', array[0]);
      connection.execSql(request);
    }
