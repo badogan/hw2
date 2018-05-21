@@ -63,8 +63,8 @@ var connection = new Connection(config);
         executeStatement1();  
     });  
 
-    var Request = require('tedious').Request  
-    var TYPES = require('tedious').TYPES;  
+    //var Request = require('tedious').Request  
+    //var TYPES = require('tedious').TYPES;  
 
     function executeStatement1() {  
         request = new Request("INSERT into contacts VALUES (@ID, @FirstName, @Age, @PhoneNumber);", function(err) {  
