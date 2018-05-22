@@ -40,9 +40,10 @@ app.get('/quotes', function(req, res){
             }
             else{
                 for( var i = 0; i < rows.length; i++){
-                    console.log(rows[i].quote);
+                    console.log(rows[i].quote + " " + rows[i].author+ " "+rows[i].year); //Basri expanded a bit
                 }
                 res.json(rows);
+
             }
         });
     }
