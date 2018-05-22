@@ -3,48 +3,49 @@
 // npm install body-parser --save
 // [if not installed already] install the nodemon utility
 // install and test with postman
+// npm install sqlite3 --save
 
-//imports
+//imports (now we also added sqlite3)
 var express = require('express');
 var app = express();
 var port = 3001;
 var bodyParser = require('body-parser');
+var sqlite3 = require('sqlite3');
+
+// create the db
+var db = new sqlite3.Database('quotes.db');
 
 //makes sure BodyParser used as middleware - every request passes through it
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// quotes "manual" entry as we are not using a db
-var quotes = [
-    {
-        id: 1,
-        quote: "The best is yet to come",
-        author: "Unknown",
-        year: 2000
-    },
-    {
-        id: 2,
-        quote: "This is a quote",
-        author: "First Last",
-        year: 1930
-    },
-    {
-        id: 3,
-        quote: "This is another quote",
-        author: "First2 Last2",
-        year: 1910
-    }
-    ];
-
 //Routes start here!
 //GET: when the user enters to receive all quotes: localhost:3001/quotes
+//now extended with proper sql commands
 app.get('/quotes', function(req, res){
-    console.log("Get a list of all quotes as json");
     if(req.query.year){
-        res.send("Return a list of quotes from the year: " + req.query.year);
-      }
-      else{
-        res.json(quotes);
-      }
+        db.all('SELECT * FROM quotes WHERE year = ?', [req.query.year], function(err, rows){
+            if(err){
+                res.send(err.message);
+            }
+            else{
+                console.log("Return a list of quotes from the year: " + req.query.year);
+                res.json(rows);
+            }
+        });
+    }
+    else{
+        db.all('SELECT * FROM quotes', function processRows(err, rows){
+            if(err){
+                res.send(err.message);
+            }
+            else{
+                for( var i = 0; i < rows.length; i++){
+                    console.log(rows[i].quote);
+                }
+                res.json(rows);
+            }
+        });
+    }
 });
 
 //GET: when the user enters to receive a specific quote: localhost:3001/quoteswithID/2
