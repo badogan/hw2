@@ -50,16 +50,45 @@ app.get('/quotes', function(req, res){
 });
 
 //GET: when the user enters to receive a specific quote: localhost:3001/quoteswithID/2
-app.get('/quoteswithID/:id', function(req, res){
+//app.get('/quoteswithID/:id', function(req, res){
+//    console.log("return quote with the ID: " + req.params.id);
+//    res.send("Return quote with the ID: " + req.params.id);
+//});
+
+//
+app.get('/quotes/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
-    res.send("Return quote with the ID: " + req.params.id);
+    db.get('SELECT * FROM quotes WHERE rowid = ?', req.params.id, function(err, row){
+        if(err){
+            console.log(err.message);
+        }
+        else{
+            res.json(row);
+        }
+    });
 });
 
 //POST: when the user enters a new quote
-app.post('/quotes', function(req, res){
+//app.post('/quotes', function(req, res){
+//    console.log("Insert a new quote: " + req.body.quote);
+//    res.json(req.body);
+//  });
+
+  app.post('/quotes', function(req, res){
     console.log("Insert a new quote: " + req.body.quote);
-    res.json(req.body);
-  });
+    db.run('INSERT INTO quotes VALUES (?, ?, ?)', [req.body.quote, req.body.author, req.body.year], function(err){
+        if(err){
+            console.log(err.message);
+        }
+        else{
+            res.send('Inserted quote with id: ' + this.lastID);
+        }
+    });
+});
+
+
+
+
 
 //make sure the app listens to the correct port wit the following command:
 // nodemon server.js
