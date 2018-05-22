@@ -16,7 +16,7 @@ db.serialize(function(){
     db.each('SELECT * FROM Contacts WHERE last_name = "Doe"', processRow);
     var firstName = 'John';
     db.get('SELECT * FROM Contacts WHERE first_name = ?', [firstName], function(err, row){
-        console.log("Get John's Age:");
+        console.log("Get "+firstName+" Age:");
         if(err){
             console.log("ERROR: " + err.message);
         }
