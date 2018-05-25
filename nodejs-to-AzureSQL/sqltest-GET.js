@@ -7,11 +7,11 @@ var config =
    {
     userName: 'badogan',  
     password: 'To$hiba22123',  
-    server: 'basri-db.database.windows.net',  
+    server: 'basri-sqlserver.database.windows.net',  
 
      options: 
         {
-           database: 'exercise-db' //update me
+           database: 'contacts' //update me
            , encrypt: true
         }
    }
@@ -37,7 +37,7 @@ function queryDatabase()
        // Read all rows from table
      request = new Request(
           //"SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName FROM [SalesLT].[ProductCategory] pc JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid",
-          "SELECT * from contacts",
+          "SELECT * from table_contacts",
              function(err, rowCount, rows) 
                 {
                     console.log(rowCount + ' row(s) returned');
