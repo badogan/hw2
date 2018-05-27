@@ -2,9 +2,9 @@ var Connection = require('tedious').Connection;
 var config = {  
     userName: 'badogan',  
     password: 'To$hiba22123',  
-    server: 'basri-db.database.windows.net',  
+    server: 'basri-sqldb.database.windows.net',  
     // When you connect to Azure SQL Database, you need these next options.  
-    options: {encrypt: true, database: 'exercise-db'}
+    options: {encrypt: true, database: 'contacts'}
 };  
 var connection = new Connection(config);  
 connection.on('connect', function(err) {  
@@ -17,14 +17,14 @@ var Request = require('tedious').Request
 var TYPES = require('tedious').TYPES;  
 
 function executeStatement1() {  
-    request = new Request("INSERT contacts VALUES (@ID, @FirstName, @Age, @PhoneNumber);", function(err) {  
+    request = new Request("INSERT table_contacts VALUES (@name, @surname, @age, @notes);", function(err) {  
      if (err) {  
         console.log(err);}  
     });  
-    request.addParameter('ID', TYPES.NVarChar, '14');  
-    request.addParameter('FirstName', TYPES.NVarChar , 'Zeynep');  
-    request.addParameter('Age', TYPES.Int, 48);  
-    request.addParameter('PhoneNumber', TYPES.NVarChar , '888-888-8888');  
+    request.addParameter('name', TYPES.NVarChar , 'Arda');  
+    request.addParameter('surname', TYPES.NVarChar , 'Ocean');  
+    request.addParameter('age', TYPES.NVarChar , '28');  
+    request.addParameter('notes', TYPES.NVarChar , 'Dnm notes for Arda Ocean');
     //request.on('row', function(columns) {  
     //    columns.forEach(function(column) {  
     //      if (column.value === null) {  
