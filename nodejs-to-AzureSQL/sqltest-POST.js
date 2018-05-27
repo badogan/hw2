@@ -19,8 +19,10 @@ var TYPES = require('tedious').TYPES;
 function executeStatement1() {  
     request = new Request("INSERT table_contacts VALUES (@name, @surname, @age, @notes);", function(err) {  
      if (err) {  
-        console.log(err);}  
-    });  
+        console.log(err);
+    }  
+    });
+      
     request.addParameter('name', TYPES.NVarChar , 'Arda');  
     request.addParameter('surname', TYPES.NVarChar , 'Ocean');  
     request.addParameter('age', TYPES.NVarChar , '28');  
